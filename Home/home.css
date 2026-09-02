@@ -232,12 +232,15 @@ a {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: 210px;
+    width: 200px;
+    height: 441px;
 }
 
 .livro-img {
     width: 100%;
     margin-bottom: 20px;
+
+    background-size: cover;
 }
 
 .livro-img img {
@@ -249,7 +252,7 @@ a {
 }
 
 .livro h3 {
-    font-size: 1em;
+    font-size: 1.3em;
     font-weight: 800;
     text-transform: uppercase;
     color: var(--texto);
@@ -261,29 +264,116 @@ a {
 }
 
 .livro p {
-    font-size: 0.85em;
+    font-size: 1em;
     color: #4a4a4a;
     line-height: 1.4;
 }
 
 .rodape {
     background-color: var(--azul-escuro);
-
-    display: flex;
-    justify-content: space-between;
-
-    align-items: center;
-
-    padding: 0 120px;
-
-    height: 40vh;
+    color: var(--branco);
+    padding: 100px 120px 59px;
+    min-height: 45vh;
 }
 
-.img-rodape {
-    display: flex;
-    flex-direction: column;
-
+.rodape-conteudo {
+    display: grid;
+    grid-template-columns: 1fr auto;
     justify-content: space-between;
+    align-items: start;
+    margin-bottom: 50px;
+}
 
-    gap: 100px;
+.rodape-logos {
+    display: grid;
+    gap: 85px;
+}
+
+.rodape-secoes {
+    display: grid;
+    gap: 62px;
+}
+
+/* Grupo de colunas de navegação (Biblioteca e Quem somos) */
+.rodape-links-grupo {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 150px;
+}
+
+.rodape-coluna h3,
+.rodape-redes h3 {
+    color: var(--cor-destaque);
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.rodape-coluna ul {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+}
+
+.rodape-coluna a {
+    color: var(--branco);
+    font-size: 0.95em;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.rodape-coluna a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* Seção de Redes Sociais */
+.rodape-redes {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 117px;
+}
+
+.icones-redes {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 30px;
+}
+
+.icones-redes img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.2s;
+}
+
+/* Divisor */
+.rodape-divisor {
+    border: none;
+    border-top: 1px solid var(--branco);
+    margin-bottom: 40px;
+}
+
+/* Sub-rodapé (Copyright e Termos) */
+.rodape-inferior {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    font-size: 0.85em;
+}
+
+.links-termos {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 25px;
+}
+
+.links-termos a {
+    color: var(--branco);
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.links-termos a:hover {
+    opacity: 1;
 }
