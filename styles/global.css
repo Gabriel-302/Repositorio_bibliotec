@@ -11,6 +11,7 @@
     --texto: #26333d;
     --branco: #fff;
     --cor-destaque: #2fd6cb;
+    --fundos: #e9f0ef;
 } 
 
 html {
@@ -21,4 +22,37 @@ body {
     font-family: "Montserrat", sans-serif;
     background-color: var(--branco);
     color: var(--texto);
+}
+
+/* CABEÇALHO */
+
+a {
+    color: var(--branco);
+    text-decoration: none; /*Tira o sublinhado do link*/
+}
+
+.cabecalho {
+    background-color: var(--azul-escuro);
+
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 120px;
+
+    height: 10vh;
+}
+
+.navegacao {
+    display: flex;
+    align-items: center;
+
+    gap: 50px;
+}
+
+.navegacao a {
+    text-transform: uppercase;
+    font-size: 1em; /* equivale a 16px */
+    font-weight: 500;
 }
